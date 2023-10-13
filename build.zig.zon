@@ -1,0 +1,18 @@
+.{
+    .name = "event",
+    .version = "2.2.1",
+    .paths = .{
+        "WIN32-Code",
+        "include",
+        "compat",
+        "*.c",
+        "*.h",
+        "*.h.cmake",
+    },
+    .dependencies = .{
+        .libevent = .{
+            .url = "git+https://github.com/libevent/libevent#c9af024585e743f0eb1521b69165cab783982def",
+            .hash = "1220fe630a1efdb792bbe103adc9e080e46161ce52bbb7c3bd6bb5eeb72c3396c565",
+        },
+    },
+}
