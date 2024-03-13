@@ -2,12 +2,9 @@
     .name = "event",
     .version = "2.2.1",
     .paths = .{
-        "WIN32-Code",
-        "include",
-        "compat",
-        "*.c",
-        "*.h",
-        "*.h.cmake",
+        "src",
+        "build.zig",
+        "build.zig.zon",
     },
     .dependencies = .{
         .libevent = .{
