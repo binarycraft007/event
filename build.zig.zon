@@ -11,8 +11,8 @@
     },
     .dependencies = .{
         .libevent = .{
-            .url = "git+https://github.com/libevent/libevent#c9af024585e743f0eb1521b69165cab783982def",
-            .hash = "1220fe630a1efdb792bbe103adc9e080e46161ce52bbb7c3bd6bb5eeb72c3396c565",
+            .url = "https://github.com/libevent/libevent/archive/4fd07f0ee82eb89337b4e369864e9cedae8a116c.tar.gz",
+            .hash = "122074bb0d920f6294735a5c7cbffc261259602dbde7e07c3548ccedb3ea0325e508",
         },
     },
 }

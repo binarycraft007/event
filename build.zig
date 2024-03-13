@@ -4,15 +4,15 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
     const libevent_dep = b.dependency("libevent", .{});
+    const t = target.result;
     const lib = b.addStaticLibrary(.{
         .name = "event",
+        .link_libc = true,
         .root_source_file = .{ .path = "src/compat.zig" },
         .target = target,
         .optimize = optimize,
     });
-    const t = lib.target_info.target;
     lib.want_lto = t.os.tag != .macos;
-    lib.linkLibC();
     const event_config_h = b.addConfigHeader(.{
         .style = .{ .cmake = libevent_dep.path("event-config.h.cmake") },
         .include_path = "event2/event-config.h",
